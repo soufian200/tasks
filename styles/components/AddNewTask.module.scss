@@ -1,0 +1,43 @@
+@import "../mixins.scss";
+@import "../colors.scss";
+
+.add_new{
+    @include shadow;
+    margin-top: 8rem;
+    max-width: 16rem;
+}
+.add_new .head{
+    text-transform: capitalize;
+    margin-bottom: 1rem
+}
+.task_form{
+    width: 100%;
+}
+input.input_task{
+    width: 100%;
+    background: $light-1;
+    padding: 1rem;
+    border: 0;
+    outline: 0;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    border-radius: .4rem;
+}
+button.add_btn{
+    padding: 1rem;
+    width: 100%;
+    background: $primary;
+    border: 0;
+    outline: 0;
+    border-radius: .4rem;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover{
+        background: $hoverPrimary;
+    }
+}

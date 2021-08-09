@@ -1,0 +1,70 @@
+@import "../colors.scss";
+@import "../mixins.scss";
+
+
+.profile{
+    display:flex;
+    align-items: center;
+    padding: .3rem;
+    margin-left: .7rem;
+
+    & .profile_pic{
+        width: 2.6rem;
+        height: 2.6rem;
+        background: #673ab7;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: .6rem;
+      }
+  }
+.profile_pic > h3{
+    text-transform: capitalize;
+    color: white;
+    font-size: 1rem;
+}
+.username{
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+  
+
+.menu{
+    margin-top: 8rem;
+    @include shadow;
+    padding: 0rem;
+    & ul{
+        padding: 1rem;
+        padding-top: 1rem;
+        & li{
+            & a{
+                display: flex;
+                align-items: center;
+                padding: .5rem 3rem;
+                padding-left: 0;
+                margin-bottom: .1rem;
+                font-weight: 600;
+                transition: .3s;
+                cursor: pointer;
+
+                &:hover{
+                    color: $primary;
+
+                }
+                & span{
+                    text-transform: capitalize;
+                    margin-left: .5rem;
+                    font-size: 1.2rem;
+                    
+                }
+
+                & svg{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    
+}
+

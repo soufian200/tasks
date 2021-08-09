@@ -1,0 +1,38 @@
+.tasks_btns{
+    display: flex;
+    align-items: center;
+    & .btn{
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+        transition: .3s;
+        padding: .2rem .6rem;
+        border-radius: 5rem;
+        color: #7c7c7c;
+
+        & > span{
+            margin-left: .2rem;
+            text-transform: capitalize;
+        }
+
+        &:hover{
+            cursor: pointer;
+            opacity: .7;
+        }
+    }
+}
+
+
+
+.btn.select{
+    color: #000;
+}
+// .tasks_btns .btn.check{
+//     color: ${colors.checkAll}
+// }
+// .tasks_btns .btn.remove{
+//     color: ${colors.remove}
+// }
+// .tasks_btns .btn.edit{
+//     color: ${colors.edit}
+// }
