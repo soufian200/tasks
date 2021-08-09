@@ -31,7 +31,7 @@ export default function Search() {
         <Head>
             <title>Search for tasks</title>
         </Head>
-        <ActionBar name="Search" tasksArr={search} />
+        <ActionBar name="Search" tasksArr={search} type="search" />
         <Container theme={theme}>
             {
                 search && search.length === 0 ? (!query.trim() ? <Msg>

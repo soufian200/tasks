@@ -50,9 +50,20 @@ export default function TasksProvider({ children }) {
      * @event
      * Remove task
      * */
-    const removeTask = (tasksArr) => {
+    const removeTask = (tasksArr, name) => {
+        console.log(name)
 
-        const filteredTasks = getDiff(tasksArr);
+        // console.log(tasksArr);
+        if (name === "Search") {
+            const filteredSearch = getDiff(tasksArr);
+            console.log(filteredSearch)
+            setSearch(filteredSearch)
+        }
+
+        const filteredTasks = getDiff(tasks);
+
+
+        // console.log(filteredTasks)
         updateTasks(filteredTasks)
         clearIdsSelected()
 
@@ -62,7 +73,7 @@ export default function TasksProvider({ children }) {
     const check = () => {
 
         const selected = getSelectedIds();
-        const filteredTasks = getDiff(unCheckedTasks);
+        const filteredTasks = getDiff(tasks);
         let interarr = _.intersectionBy(tasks, selected, 'id');
         interarr = interarr.map(i => ({ ...i, checked: true }));
         updateTasks([...filteredTasks, ...interarr])

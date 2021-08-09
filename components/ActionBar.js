@@ -48,7 +48,7 @@ export default function ActionBar({ name, tasksArr }) {
                     <BsCheckAll />
                     <span>check</span>
                 </Btn>
-                <Btn onClick={() => removeTask(tasksArr)}>
+                <Btn onClick={() => removeTask(tasksArr, name)}>
                     <FiTrash />
                     <span>remove</span>
                 </Btn>
