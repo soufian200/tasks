@@ -3,9 +3,8 @@ import Menu from "../components/Menu";
 import Nav from "../components/Nav";
 import main from "../styles/layouts/main";
 import styles from "../styles/Home.module.css";
-import logo from "../assets/logo.svg"
+import logo from "../assets/logo.png"
 import Image from 'next/image';
-import ActionBar from "../components/ActionBar";
 import ThemeMode from "../components/ThemeMode";
 import styled from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
@@ -27,7 +26,7 @@ export default function Main({ children }) {
     return <Container theme={theme}>
         <div>
             <div id={styles.logo}>
-                <Image src={logo} alt="logo" />
+                <Image src={logo} alt="tasks" />
             </div>
         </div>
         <main className="body">
