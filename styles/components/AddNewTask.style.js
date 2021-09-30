@@ -28,13 +28,14 @@ const Form = styled.form`
 const AddBtn = styled.button`
     padding: 1rem;
     width: 100%;
-    background: ${({ disabled }) => disabled ? "#e9e9e9" : colors.primary};
+    background: ${colors.primary};
+    opacity: ${({ disabled }) => disabled ? .6 : 1};
     border: 0;
     outline: 0;
     border-radius: .4rem;
     text-transform: capitalize;
     font-size: 1.1rem;
-    color: ${({ disabled }) => disabled ? "#afafaf" : "#fff"}  ;
+    color: white;
     font-weight: 600;
     
     transition: .4s;
